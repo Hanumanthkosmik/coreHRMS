@@ -31,14 +31,22 @@ public class CommonUtils{
 	public static WebDriverWait wait;
 	public static Properties config;
 	public static WebDriver driver;
+	public static FileInputStream fis ;
 	public static final String configFilePath = "\\src\\test\\resources\\config.properties";
 
-//this method loads the application's configuration settings from a properties file.
-	public static void initialize() throws Exception{
-		
-		config = readPropertiesFile(System.getProperty("user.dir") + configFilePath);
-		
-	}
+	// -------------------- Properties Implementations ----------------------
+	
+	//this method loads the application's configuration settings from a properties file.
+		public static void readPropertiesFile() throws Exception{
+									
+			try {
+				 fis = new FileInputStream(System.getProperty("user.dir") + configFilePath);
+				 config = new Properties();
+				 config.load(fis);
+			} catch (Exception e) {
+				TestNGUtility.assertFail(e.getMessage());
+			}
+		}
 //The method launches a specified web browser and navigates to a URL.	
 	public static void launchBrowserAndNavigateToApp() {
 
@@ -160,7 +168,8 @@ public class CommonUtils{
 		}
 	}
 	
-	//method creates an XPath locator to find an element on the web page based on its visible text.
+	//method creates an XPath locator to find an element on the web page based 
+	//on its visible text.
 	
 	public static By getCommonLocatorUsingText(String value) throws Exception {
 		By by = null;
@@ -263,11 +272,14 @@ public class CommonUtils{
 	
 //to wait for a specific web element to become visible on a web page
 	public static boolean waitForElementToBeVisible(By by) {
-		boolean flag = false;
+		boolean flag=false;
 		try {
 			wait = new WebDriverWait(driver, Duration.ofSeconds(Integer.parseInt(config.getProperty("loadTime"))));
 			wait.until(ExpectedConditions.presenceOfElementLocated(by));
 			flag = true;
+			
+			
+			
 		} catch (Exception e) {
 			TestNGUtility.assertFail(e.getMessage());
 		}
@@ -293,21 +305,7 @@ public class CommonUtils{
 		}
 	}
 	
-	// -------------------- Properties Implementations ----------------------
-	//This method read the a properties file
-	public static Properties readPropertiesFile(String fileName) throws IOException {
-		FileInputStream fis = null;
-		try {
-			fis = new FileInputStream(fileName);
-			config = new Properties();
-			config.load(fis);
-		} catch (Exception e) {
-			TestNGUtility.assertFail(e.getMessage());
-		}
+	
 		
-		return config;
-	}
-	
-	
 	
 }

@@ -30,10 +30,18 @@ public class LoginPage {
 			CommonUtils.enterValue(getPassword(), "selenium", true);
 			
 			CommonUtils.clickElement(getSignIn());
+			
+			
+			
 		}catch(Exception e) {
 			TestNGUtility.assertFail(e.getMessage());
 		}
 	}
+	
+	
+	
+	
+	
 		
 	// Getter/Setter functions
 	public By getUsername() {

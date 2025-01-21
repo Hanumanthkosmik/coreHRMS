@@ -6,21 +6,14 @@
         <include name="Smoke"/>
       </run>
     </groups>
+   
     <classes>
-     
       <class name="com.Hrms.tests.TestPIMPage">
-      
-      
         <methods>
-          <include name="deleteEmployee"/>
+          <include name="editEmployeeDetails"/>
         </methods>
-        
-        
       </class> <!-- com.Hrms.tests.TestPIMPage -->
-      
-      
-      
-      
     </classes>
+    
   </test> <!-- Smoke Testing(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  Test</title>
+<title>TestNG:  SmokeTest</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>Test</h2><table border='1' align="center">
+<h2 align='center'>SmokeTest</h2><table border='1' align="center">
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Dec 05 09:44:54 IST 2024</td>
+<td>Started on:</td><td>Thu Oct 24 10:41:13 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (48 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (51 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>Smoke </td>
 </tr><tr>
@@ -75,19 +75,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.Hrms.tests.TestPIMPage.editEmployeeDetails()'><b>editEmployeeDetails</b><br>Test class: com.Hrms.tests.TestPIMPage<br>Test method: Verify that employee details can be edited successfully</td>
-<td><div><pre>java.lang.AssertionError: expected [Akki] but found [Sai]
-	at com.Hrms.tests.TestPIMPage.editEmployeeDetails(TestPIMPage.java:117)
+<td title='com.Hrms.tests.TestPIMPage.viewEmployeeList()'><b>viewEmployeeList</b><br>Test class: com.Hrms.tests.TestPIMPage<br>Test method: Verify that the employee list is displayed correctly with accurate information</td>
+<td><div><pre>java.lang.AssertionError: expected [akki] but found [kki]
+	at com.Hrms.tests.TestPIMPage.viewEmployeeList(TestPIMPage.java:91)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1541525668", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1541525668'><pre>java.lang.AssertionError: expected [Akki] but found [Sai]
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1096485705", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1096485705'><pre>java.lang.AssertionError: expected [akki] but found [kki]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:629)
 	at org.testng.Assert.assertEquals(Assert.java:639)
-	at com.Hrms.tests.TestPIMPage.editEmployeeDetails(TestPIMPage.java:117)
+	at com.Hrms.tests.TestPIMPage.viewEmployeeList(TestPIMPage.java:91)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

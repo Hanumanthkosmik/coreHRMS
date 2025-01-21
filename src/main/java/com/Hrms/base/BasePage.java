@@ -13,7 +13,7 @@ public class BasePage {
 	@BeforeTest
 	public void setup() throws Exception {
 		
-	CommonUtils.initialize();
+	CommonUtils.readPropertiesFile();
 	CommonUtils.launchBrowserAndNavigateToApp();
 		
 	}
