@@ -114,8 +114,23 @@ public class TestPIMPage extends BasePage{
 	
 	@Test(description="Verify that an employee can be deleted successfully",priority=3)
 	public void deleteEmployee() throws Exception {
-	 
-	
+		// Log in to the application using the login page method
+	    loginPage.login();
+	    
+	    // Wait for 5 seconds to ensure the new page loads
+	    CommonUtils.hardWait(5);
+	    
+	 // Assert that the welcome message contains "Welcome selenium"
+	    TestNGUtility.assertTrue(CommonUtils.getElementText(loginPage.getWelcomePage()), "Welcome selenium");
+	    
+	    // Move the mouse to the PIM (Personnel Information Management) element
+	    CommonUtils.moveToElement(By.xpath("//li[@id='pim']"));
+	    
+		    // Click on the "Add Employee" button
+	    CommonUtils.clickElement(PIMPage.getAddEmp());
+	    
+	    // Click on the "delete Employee" button
+	    CommonUtils.clickElement(PIMPage.getEmpDelete());
 	}
 	
 	@Test(description="Verify that the employee list is displayed correctly with accurate information",priority=4)
