@@ -9,6 +9,9 @@ public class PIMPage{
 
 	private final static By by_pim = By.xpath("//li[@id='pim']");
 	private final static By by_addEmp = By.xpath("//*[@id='pim']/ul/li[2]/a");
+	
+	private final static By by_empDelete = By.xpath("//*[@id='pim']/ul/li[2]/a");
+	
 	private final static By by_firstName = By.xpath("//input[@id='txtEmpFirstName']");
 	private final static By by_lastName = By.xpath("//input[@id='txtEmpLastName']");
 	private final static By by_iframe = By.xpath("//iframe[@id='rightMenu']");
@@ -27,6 +30,10 @@ public class PIMPage{
 	
 	public static By getAddEmp() throws Exception {
 		return by_addEmp;
+	}
+	
+	public static By getEmpDelete() throws Exception {
+		return by_empDelete;
 	}
 	
 	public static By getFirstName() throws Exception {
