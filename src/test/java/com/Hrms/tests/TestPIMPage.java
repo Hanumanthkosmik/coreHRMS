@@ -131,6 +131,9 @@ public class TestPIMPage extends BasePage{
 	    
 	    // Click on the "delete Employee" button
 	    CommonUtils.clickElement(PIMPage.getEmpDelete());
+	    
+	    // Click on the "delete Employee" button
+	    CommonUtils.clickElement(PIMPage.getEmpDelete());
 	}
 	
 	@Test(description="Verify that the employee list is displayed correctly with accurate information",priority=4)
